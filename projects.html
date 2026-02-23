@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residences | Naroda Groups</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .projects-grid {
+            padding: 150px 5vw;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 80px;
+        }
+
+        .project-item {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .project-item:nth-child(even) {
+            transform: translateY(100px);
+            /* Staggered grid */
+        }
+
+        .p-image {
+            height: 600px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .p-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1s ease;
+        }
+
+        .project-item:hover .p-image img {
+            transform: scale(1.1);
+        }
+
+        .p-info {
+            padding-top: 20px;
+        }
+
+        .p-cat {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--acc-color);
+        }
+
+        .p-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            margin: 10px 0;
+        }
+
+        .p-desc {
+            font-size: 0.9rem;
+            color: #666;
+            max-width: 80%;
+        }
+
+        @media(max-width: 900px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+
+            .project-item:nth-child(even) {
+                transform: none;
+            }
+
+            .p-image {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- CURSOR -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-circle" id="cursor-circle"></div>
+
+    <!-- NAV -->
+    <header class="main-header" style="position: fixed; background: var(--bg-color);">
+        <a href="index.html" class="brand-logo" style="color: var(--text-color); mix-blend-mode: normal;">NARODA
+            GROUPS<span class="brand-dot" style="color: var(--acc-color);">.</span></a>
+        <div class="menu-trigger" style="color: var(--text-color); mix-blend-mode: normal;">
+            <span class="menu-text">MENU</span>
+            <div class="hamburger"><span></span><span></span></div>
+        </div>
+    </header>
+
+    <!-- MENU -->
+    <div class="menu-overlay">
+        <div class="menu-nav">
+            <a href="index.html" class="menu-link"><span class="idx">01</span> Home</a>
+            <a href="about.html" class="menu-link"><span class="idx">02</span> Philosophy</a>
+            <a href="projects.html" class="menu-link"><span class="idx">03</span> Residences</a>
+            <a href="index.html#amenities" class="menu-link"><span class="idx">04</span> Lifestyle</a>
+            <a href="contact.html" class="menu-link"><span class="idx">05</span> Contact</a>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <section style="padding: 150px 5vw 0; text-align: center;">
+                <span class="section-tag" style="display:inline-block;">PORTFOLIO</span>
+                <h1 style="font-family: var(--font-heading); font-size: 4rem;">Curated <span
+                        class="i-font">Residences</span></h1>
+            </section>
+
+            <div class="projects-grid">
+                <!-- P1 -->
+                <div class="project-item anim-up">
+                    <div class="p-image">
+                        <img src="https://images.unsplash.com/photo-1600596542815-3b199563d438?auto=format&fit=crop&q=80&w=1000"
+                            alt="Naroda Arise">
+                    </div>
+                    <div class="p-info">
+                        <span class="p-cat">Residential</span>
+                        <h3 class="p-title">Naroda Arise</h3>
+                        <p class="p-desc">A landmark tower defining the skyline of East Ahmedabad with 4BHK Sky Villas.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- P2 -->
+                <div class="project-item anim-up">
+                    <div class="p-image">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1000"
+                            alt="Lavish">
+                    </div>
+                    <div class="p-info">
+                        <span class="p-cat">Mixed Use</span>
+                        <h3 class="p-title">Naroda Lavish</h3>
+                        <p class="p-desc">Premium retail and commercial spaces designed for high visibility and
+                            footfall.</p>
+                    </div>
+                </div>
+
+                <!-- P3 -->
+                <div class="project-item anim-up">
+                    <div class="p-image">
+                        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1000"
+                            alt="Terra Tower">
+                    </div>
+                    <div class="p-info">
+                        <span class="p-cat">Apartments</span>
+                        <h3 class="p-title">Terra Tower</h3>
+                        <p class="p-desc">Eco-friendly 3BHK apartments with vertical gardens and sustainable amenities.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- P4 -->
+                <div class="project-item anim-up">
+                    <div class="p-image">
+                        <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfe1?auto=format&fit=crop&q=80&w=1000"
+                            alt="Iconic Square">
+                    </div>
+                    <div class="p-info">
+                        <span class="p-cat">Commercial</span>
+                        <h3 class="p-title">Iconic Square</h3>
+                        <p class="p-desc">The new business hub of Naroda, featuring Grade-A offices and retail.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FOOTER -->
+            <footer class="footer-minimal">
+                <div class="footer-bg-text">NARODA GROUPS</div>
+                <div class="footer-content">
+                    <div class="cta-area">
+                        <h3>Interested?</h3>
+                        <a href="contact.html" class="big-mail-link">Enquire Now</a>
+                    </div>
+                    <div class="footer-meta">
+                        <div class="col">
+                            <p>&copy; 2026 Naroda Groups</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        // Shared Logic
+        const cursorDot = document.getElementById('cursor-dot');
+        const cursorCircle = document.getElementById('cursor-circle');
+        window.addEventListener('mousemove', (e) => {
+            gsap.to(cursorDot, { x: e.clientX, y: e.clientY, duration: 0.1 });
+            gsap.to(cursorCircle, { x: e.clientX, y: e.clientY, duration: 0.5, ease: 'power2.out' });
+        });
+        document.querySelectorAll('a, .project-item').forEach(el => {
+            el.addEventListener('mouseenter', () => cursorCircle.classList.add('hovered'));
+            el.addEventListener('mouseleave', () => cursorCircle.classList.remove('hovered'));
+        });
+
+        const menuTrigger = document.querySelector('.menu-trigger');
+        const menuOverlay = document.querySelector('.menu-overlay');
+        let isMenuOpen = false;
+        menuTrigger.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            isMenuOpen ? menuOverlay.classList.add('active') : menuOverlay.classList.remove('active');
+            menuTrigger.classList.toggle('active');
+        });
+        document.querySelectorAll('.menu-link').forEach(l => l.addEventListener('click', () => {
+            isMenuOpen = false; menuOverlay.classList.remove('active'); menuTrigger.classList.remove('active');
+        }));
+
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray('.anim-up').forEach(el => {
+            gsap.from(el, {
+                y: 100, opacity: 0, duration: 1,
+                scrollTrigger: { trigger: el, start: "top 85%" }
+            });
+        });
+    </script>
+</body>
+
+</html>
